@@ -5,3 +5,5 @@ __pycache__
 ~*
 ~*.*
 *.ai
+output.txt
+*Expansion.py

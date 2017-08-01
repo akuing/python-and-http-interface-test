@@ -1,5 +1,5 @@
 from random import randint
-
+import os
 class Star:
     def __init__(self):
         self.position = randint(0,23)
@@ -18,6 +18,7 @@ if (__name__ == "__main__"):
     isRunning = True
     star = Star()
     while(isRunning == True):
+        os.system("clear")
         star.draw()
         command = input("请输入移动星星的指令（L/l or R/r）：")
         if(command.upper() == 'L'):
