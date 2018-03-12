@@ -63,4 +63,5 @@ class TestMyCalculatorByList(unittest.TestCase):
     def testRunTests(self):
         calc = MyCalculator()
         for testdata in self.testDataList:
-            self.assertEqual(testdata["expect"],calc.divide(testdata["param1"],testdata["param2"]))
+            with self.subTest(msg=testdata["name"]):
+                self.assertEqual(testdata["expect"],calc.divide(testdata["param1"],testdata["param2"]))

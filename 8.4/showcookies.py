@@ -11,10 +11,7 @@ while(len(strcookie.strip())>0) :
     else:
         print("请输入正确的cookie组，格式为key=value")
 
-
     strcookie=input()
-result = requests.get("http://httpbin.org/cookies/delete?name",cookies=dictcookies)
+result = requests.get("http://httpbin.org/cookies",cookies=dictcookies)
 #
 print(json.dumps(result.json(),indent=4))
-print(result.history[0].headers)
-print(result.request.headers)
